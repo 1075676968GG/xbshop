@@ -1,0 +1,148 @@
+.shopping-car-container .car-headers-menu {
+    border-bottom: 1px solid #f5f5f5;
+    padding: 0 15px;
+}
+
+.shopping-car-container .panel-body {
+    padding: 15px 0;
+}
+
+#checkAll {
+    vertical-align: text-bottom;
+}
+
+.shopping-car-container .car-menu {
+    text-align: center;
+}
+
+/*
+ 商品区
+ * */
+
+.shopping-car-container .goods-content {
+    margin-top: 15px;
+}
+
+.shopping-car-container .goods-content .goods-item {
+    margin-top: 20px;
+}
+
+.shopping-car-container .goods-content .goods-item .car-goods-info {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.goods-price {
+    color: red;
+    font-weight: bolder;
+}
+
+.form-control {
+    text-align: center;
+}
+
+.single-total {
+    color: red;
+    font-weight: bold;
+}
+
+.goods-params {
+    color: darkgray;
+}
+
+.goods-params p {
+    display: block;
+}
+
+.bottom-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-menu #checkAllBottom {
+    vertical-align: text-bottom;
+}
+
+#deleteMulty {
+    color: cornflowerblue;
+    cursor: pointer;
+    vertical-align: text-bottom;
+}
+
+.bottom-menu-include {
+    background: #e5e5e5;
+}
+
+#selectGoodsCount {
+    color: orangered;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+#selectGoodsMoney {
+    color: orangered;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.panel-default .submitData {
+    background: orangered;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+    height: 49px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 10px;
+
+}
+
+.panel-default .submitDis {
+    background: #B0B0B0;
+    cursor: no-drop;
+}
+
+.shopping-car-container .panel-default {
+    position: relative;
+}
+
+.goods-operate a {
+    margin-right: 10px;
+}
+
+.car-headers-menu .row div {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.goods-image-column a .goods-image {
+    width: 100%;
+}
+
+.goods-info {
+    width: 100%;
+    text-align: center;
+}
+
+@media(max-width:1000px) {
+    .form-control {
+        padding: 6px 0;
+    }
+}
+
+@media(max-width:720px) {
+    .form-control {
+        padding: 0;
+    }
+
+    .input-group-btn .goods-sub,
+    .input-group-btn .goods-add {
+        padding: 6px 10px;
+    }
+}

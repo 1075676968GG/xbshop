@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css"><!-- 图标样式 -->
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <link rel="stylesheet" type="text/css" href="./css/profile.css">
+    <link rel="stylesheet" href="./css/ionicons.min.css">
+
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/jquery-scrolltofixed-min.js" type="text/javascript"></script><!-- 导航栏 -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.menu-aim.js"></script>
+    <script src="js/main.js"></script><!-- 导航栏 -->
+    <script src="js/custom.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=6PVV6WP9bLyvP8Gs23ZW2kQ0Blw2Fwvt"></script>
+    <script type="text/javascript" src="js/map.jquery.js"></script>
+
+</head>
+<body>
+    <div class="header">
+        <div class="w3ls-header">
+            <div class="w3ls-header-left">
+                <p>
+                    <a href="#"><img style="position: relative;left: -10px; top: -1px" src="./images/shopping.png">
+                        XB全新高端购物平台
+                    </a>
+                </p>
+            </div>
+            <div class="w3ls-header-right">
+                <ul>
+                    <li class="dropdown head-dpdn">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"
+                                aria-hidden="true"></i>人名<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">个人中心</a></li>
+                            <li><a href="login.html">注销</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown head-dpdn">
+                        <a href="car.html" class="dropdown-toggle"><i class="fa fa-gift" aria-hidden="true"></i>购物车</a>
+                    </li>
+                    <li class="dropdown head-dpdn">
+                        <a href="waitPay.html" class="dropdown-toggle"><i class="fa fa-credit-card-alt"
+                                aria-hidden="true"></i>待支付</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="header-two">
+            <div class="container">
+                <div class="header-logo">
+                    <h1><a href="home.html"><span>X</span>Biao </a></h1>
+                    <h6>Your stores. Your place.</h6>
+                </div>
+                <div class="header-search">
+                    <form action="#" method="post">
+                        <input type="search" name="Search" placeholder="Search for a Product..." required="">
+                        <button type="submit" class="btn btn-default" aria-label="Left Align">
+                            <i class="fa fa-search" aria-hidden="true"> </i>
+                        </button>
+                    </form>
+                </div>
+                <div class="header-cart">
+                    <div class="my-account">
+                        <a href="javascript:;"></a>
+                    </div>
+                    <div class="cart">
+                        <a href="car.html">
+                            <button class="w3view-cart" type="submit" name="submit" value=""><i
+                                    class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="header-three">
+            <div class="container">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="productList.html">仙女列表</a></li>
+                    <li><a href="productList.html">可爱列表</a></li>
+                    <li><a href="productList.html">咔咔列表</a></li>
+                    <li><a href="productList.html">哒哒列表</a></li>
+                    <li><a href="productList.html">可爱列表</a></li>
+                    <li><a href="productList.html">咔咔列表</a></li>
+                    <li><a href="productList.html">憨憨列表</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 个人中心 -->
+    <div class="profile">
+        <div class="container">
+            <ol class="breadcrumb breadcrumb1">
+                <li><a href="home.html">Home</a></li>
+                <li class="active">个人中心</li>
+            </ol>
+            <div class="row">
+                <div class="col-lg-4">
+                    <!-- user -->
+                    <div class="user">
+                        <div class="user__head">
+                            <div class="user__img">
+                                <img src="./images/user5.jpg" alt="">
+                            </div>
+                            <input type="file" class="hidden uploadImg">
+                        </div>
+                        <div class="user__title">
+                            <h2>John Doe</h2>
+                            <p>Front-end Developer</p>
+
+                            <div class="profile__actions">
+                                <div class="post__location">
+                                    <i class="icon ion-ios-navigate"></i>
+                                    <span>Vietnam</span>
+                                </div>
+
+                                <div class="post__actions">
+                                    <a class="post__actions-btn post__actions-btn--green" href="#">
+                                        <i class="icon ion-ios-bookmark"></i>
+                                    </a>
+                                    <a class="post__actions-btn post__actions-btn--red" href="#">
+                                        <i class="icon ion-ios-mail"></i>
+                                    </a>
+                                    <a href="#" class="post__actions-btn post__actions-btn--blue"><span>Hire</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="user__list">
+                            <li><span>姓名:</span> <span>John Doe</span></li>
+                            <li><span>年龄:</span> <span>21</span></li>
+                            <li><span>性别:</span> <span>男</span></li>
+                            <li><span>手机号:</span> <span>123456789</span></li>
+                        </ul>
+                        <ul class="user__stats">
+                            <li>
+                                <p>订单</p>
+                                <span>26</span>
+                            </li>
+                            <li>
+                                <p>购物车</p>
+                                <span>88</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end user -->
+                    <!-- social -->
+                    <div class="sidebox">
+                        <div class="sidebox__share">
+                            <span>Social:</span>
+                            <ul>
+                                <li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
+                                <li class="instagram"><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
+                                <li class="twitter"><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
+                                <li class="vk"><a href="#"><i class="icon ion-logo-vk"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end social -->
+                </div>
+                <div class="col-lg-8">
+                    <ul class="nav nav-tabs main__nav" id="main__nav" role="tablist">
+                        <li role="presentation" class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab-1" role="tab"
+                                aria-controls="tab-1">我的订单</a>
+                        </li>
+
+                        <li role="presentation" class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab-2" role="tab"
+                                aria-controls="tab-2">我的收藏</a>
+                        </li>
+                        <li role="presentation" class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab-3" role="tab"
+                                aria-controls="tab-3">个人信息</a>
+                        </li>
+                        <li role="presentation" class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4">待评价</a>
+                        </li>
+                        <li role="presentation" class="nav-item active">
+                            <a class="nav-link" data-toggle="tab" href="#tab-5" role="tab"
+                                aria-controls="tab-5">收货地址</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade" id="tab-1" role="tabpanel">
+                            <!-- post -->
+                            <div class="post">
+                                <div class="goods-item">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="col-md-3 col-sm-2 col-xs-2  car-goods-info goods-image-column">
+                                                <a href="goodsDetail.html">
+                                                    <img class="goods-image" src="images/e3.png" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3 col-sm-2 col-xs-2 car-goods-info goods-params">
+                                                <p class="goods-info">
+                                                    宇宙无敌超级第一手机
+                                                </p>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-price">
+                                                <span class="goods-price single-price">￥199</span></div>
+                                            <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-counts">
+                                                <div class="input-group">
+                                                    <input type="text" disabled class="btn num form-control goods-count"
+                                                        value="1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-money-count">
+                                                <span class="goods-totalMoney single-total">￥199</span></div>
+                                            <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-operate">
+                                                <a href="#" type="button" class="btn btn-primary item-sure">确认收货</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post">
+                                <div class="goods-item">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="col-md-3 col-sm-2 col-xs-2  car-goods-info goods-image-column">
+                                                <a href="goodsDetail.html">
+                                                    <img class="goods-image" src="images/e3.png" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3 col-sm-2 col-xs-2 car-goods-info goods-params">
+                                                <p class="goods-info">
+                                                    宇宙无敌超级第一手机
+                                                </p>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-price">
+                                                <span class="goods-price single-price">￥199</span></div>
+                                            <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-counts">
+                                                <div class="input-group">
+                                                    <input type="text" disabled class="btn num form-control goods-count"
+                                                        value="1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-money-count">
+                                                <span class="goods-totalMoney single-total">￥199</span></div>
+                                            <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-operate">
+                                                <a href="#" type="button" class="btn btn-primary item-sure">确认收货</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post">
+                                <div class="goods-item">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="col-md-3 col-sm-2 col-xs-2  car-goods-info goods-image-column">
+                                                <a href="goodsDetail.html">
+                                                    <img class="goods-image" src="images/e3.png" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3 col-sm-2 col-xs-2 car-goods-info goods-params">
+                                                <p class="goods-info">
+                                                    宇宙无敌超级第一手机
+                                                </p>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-price">
+                                                <span class="goods-price single-price">￥199</span></div>
+                                            <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-counts">
+                                                <div class="input-group">
+                                                    <input type="text" disabled class="btn num form-control goods-count"
+                                                        value="1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-money-count">
+                                                <span class="goods-totalMoney single-total">￥199</span></div>
+                                            <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-operate">
+                                                <a href="#" type="button" class="btn btn-primary item-sure">确认收货</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post">
+                                <div class="goods-item">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="col-md-3 col-sm-2 col-xs-2  car-goods-info goods-image-column">
+                                                <a href="goodsDetail.html">
+                                                    <img class="goods-image" src="images/e3.png" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3 col-sm-2 col-xs-2 car-goods-info goods-params">
+                                                <p class="goods-info">
+                                                    宇宙无敌超级第一手机
+                                                </p>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-price">
+                                                <span class="goods-price single-price">￥199</span></div>
+                                            <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-counts">
+                                                <div class="input-group">
+                                                    <input type="text" disabled class="btn num form-control goods-count"
+                                                        value="1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-money-count">
+                                                <span class="goods-totalMoney single-total">￥199</span></div>
+                                            <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-operate">
+                                                <a href="#" type="button" class="btn btn-primary item-sure">确认收货</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab-2" role="tabpanel">
+                            <div class="post">
+                                <div class="col-md-3 product-grids">
+                                    <div class="agile-products">
+                                        <div class="new-tag">
+                                            <h6>TOP1 <br> Hot</h6>
+                                        </div>
+                                        <a href="goodsDetail.html"><img src="images/f3.png" class="img-responsive"
+                                                alt="img"></a>
+                                        <div class="agile-product-text">
+                                            <h5><a href="goodsDetail.html">Jewellery</a></h5>
+                                            <h6>$70</h6>
+                                            <h6>超级可爱的店铺</h6>
+                                            <button type="submit" class="w3ls-cart pw3ls-cart">
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>查看详情
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 product-grids">
+                                    <div class="agile-products">
+                                        <div class="new-tag">
+                                            <h6>TOP1 <br> Hot</h6>
+                                        </div>
+                                        <a href="goodsDetail.html"><img src="images/f3.png" class="img-responsive"
+                                                alt="img"></a>
+                                        <div class="agile-product-text">
+                                            <h5><a href="goodsDetail.html">Jewellery</a></h5>
+                                            <h6>$70</h6>
+                                            <h6>超级可爱的店铺</h6>
+                                            <button type="submit" class="w3ls-cart pw3ls-cart">
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>查看详情
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 product-grids">
+                                    <div class="agile-products">
+                                        <div class="new-tag">
+                                            <h6>TOP1 <br> Hot</h6>
+                                        </div>
+                                        <a href="goodsDetail.html"><img src="images/f3.png" class="img-responsive"
+                                                alt="img"></a>
+                                        <div class="agile-product-text">
+                                            <h5><a href="goodsDetail.html">Jewellery</a></h5>
+                                            <h6>$70</h6>
+                                            <h6>超级可爱的店铺</h6>
+                                            <button type="submit" class="w3ls-cart pw3ls-cart">
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>查看详情
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 product-grids">
+                                    <div class="agile-products">
+                                        <div class="new-tag">
+                                            <h6>TOP1 <br> Hot</h6>
+                                        </div>
+                                        <a href="goodsDetail.html"><img src="images/f3.png" class="img-responsive"
+                                                alt="img"></a>
+                                        <div class="agile-product-text">
+                                            <h5><a href="goodsDetail.html">Jewellery</a></h5>
+                                            <h6>$70</h6>
+                                            <h6>超级可爱的店铺</h6>
+                                            <button type="submit" class="w3ls-cart pw3ls-cart">
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>查看详情
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 product-grids">
+                                    <div class="agile-products">
+                                        <div class="new-tag">
+                                            <h6>TOP1 <br> Hot</h6>
+                                        </div>
+                                        <a href="goodsDetail.html"><img src="images/f3.png" class="img-responsive"
+                                                alt="img"></a>
+                                        <div class="agile-product-text">
+                                            <h5><a href="goodsDetail.html">Jewellery</a></h5>
+                                            <h6>$70</h6>
+                                            <h6>超级可爱的店铺</h6>
+                                            <button type="submit" class="w3ls-cart pw3ls-cart">
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>查看详情
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 product-grids">
+                                    <div class="agile-products">
+                                        <div class="new-tag">
+                                            <h6>TOP1 <br> Hot</h6>
+                                        </div>
+                                        <a href="goodsDetail.html"><img src="images/f3.png" class="img-responsive"
+                                                alt="img"></a>
+                                        <div class="agile-product-text">
+                                            <h5><a href="goodsDetail.html">Jewellery</a></h5>
+                                            <h6>$70</h6>
+                                            <h6>超级可爱的店铺</h6>
+                                            <button type="submit" class="w3ls-cart pw3ls-cart">
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>查看详情
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 product-grids">
+                                    <div class="agile-products">
+                                        <div class="new-tag">
+                                            <h6>TOP1 <br> Hot</h6>
+                                        </div>
+                                        <a href="goodsDetail.html"><img src="images/f3.png" class="img-responsive"
+                                                alt="img"></a>
+                                        <div class="agile-product-text">
+                                            <h5><a href="goodsDetail.html">Jewellery</a></h5>
+                                            <h6>$70</h6>
+                                            <h6>超级可爱的店铺</h6>
+                                            <button type="submit" class="w3ls-cart pw3ls-cart">
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>查看详情
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 product-grids">
+                                    <div class="agile-products">
+                                        <div class="new-tag">
+                                            <h6>TOP1 <br> Hot</h6>
+                                        </div>
+                                        <a href="goodsDetail.html"><img src="images/f3.png" class="img-responsive"
+                                                alt="img"></a>
+                                        <div class="agile-product-text">
+                                            <h5><a href="goodsDetail.html">Jewellery</a></h5>
+                                            <h6>$70</h6>
+                                            <h6>超级可爱的店铺</h6>
+                                            <button type="submit" class="w3ls-cart pw3ls-cart">
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>查看详情
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 product-grids">
+                                    <div class="agile-products">
+                                        <div class="new-tag">
+                                            <h6>TOP1 <br> Hot</h6>
+                                        </div>
+                                        <a href="goodsDetail.html"><img src="images/f3.png" class="img-responsive"
+                                                alt="img"></a>
+                                        <div class="agile-product-text">
+                                            <h5><a href="goodsDetail.html">Jewellery</a></h5>
+                                            <h6>$70</h6>
+                                            <h6>超级可爱的店铺</h6>
+                                            <button type="submit" class="w3ls-cart pw3ls-cart">
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>查看详情
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 product-grids">
+                                    <div class="agile-products">
+                                        <div class="new-tag">
+                                            <h6>TOP1 <br> Hot</h6>
+                                        </div>
+                                        <a href="goodsDetail.html"><img src="images/f3.png" class="img-responsive"
+                                                alt="img"></a>
+                                        <div class="agile-product-text">
+                                            <h5><a href="goodsDetail.html">Jewellery</a></h5>
+                                            <h6>$70</h6>
+                                            <h6>超级可爱的店铺</h6>
+                                            <button type="submit" class="w3ls-cart pw3ls-cart">
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>查看详情
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 product-grids">
+                                    <div class="agile-products">
+                                        <div class="new-tag">
+                                            <h6>TOP1 <br> Hot</h6>
+                                        </div>
+                                        <a href="goodsDetail.html"><img src="images/f3.png" class="img-responsive"
+                                                alt="img"></a>
+                                        <div class="agile-product-text">
+                                            <h5><a href="goodsDetail.html">Jewellery</a></h5>
+                                            <h6>$70</h6>
+                                            <h6>超级可爱的店铺</h6>
+                                            <button type="submit" class="w3ls-cart pw3ls-cart">
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>查看详情
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 product-grids">
+                                    <div class="agile-products">
+                                        <div class="new-tag">
+                                            <h6>TOP1 <br> Hot</h6>
+                                        </div>
+                                        <a href="goodsDetail.html"><img src="images/f3.png" class="img-responsive"
+                                                alt="img"></a>
+                                        <div class="agile-product-text">
+                                            <h5><a href="goodsDetail.html">Jewellery</a></h5>
+                                            <h6>$70</h6>
+                                            <h6>超级可爱的店铺</h6>
+                                            <button type="submit" class="w3ls-cart pw3ls-cart">
+                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>查看详情
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <nav class="navbar-right" aria-label="Page navigation">
+                                        <ul class="pagination">
+                                            <li class="disabled">
+                                                <a href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                                <a href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab-3" role="tabpanel">
+                            <!-- form -->
+                            <form action="#" class="form">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2 class="form__title">个人信息</h2>
+                                    </div>
+
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form__group">
+                                            <label for="loginName" class="form__label">用户名:</label>
+                                            <input name="loginName" id="loginName" type="text" class="form__input">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form__group">
+                                            <label for="email" class="form__label">Email:</label>
+                                            <input name="email" id="email" type="text" class="form__input">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form__group">
+                                            <label for="phone" class="form__label">手机号:</label>
+                                            <input name="firstname" id="phone" type="text" class="form__input">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form__group">
+                                            <label for="address" class="form__label">收货地址:</label>
+                                            <input name="address" disabled type="text" class="form__input">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-12">
+                                        <div class="form__group">
+                                            <label class="form__label">
+                                                <span>性别：</span>
+                                                <input class="form-inline" name="sex" type="radio" checked> 男
+                                                <input class="form-inline" type="radio" name="sex"> 女
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="form__btn" type="button"><span>保存</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- end form -->
+
+                            <!-- form -->
+                            <form action="#" class="form">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2 class="form__title">修改密码</h2>
+                                    </div>
+
+                                    <div class="col-12 col-lg-12">
+                                        <div class="form__group">
+                                            <label for="oldpass" class="form__label">旧密码:</label>
+                                            <input name="oldpass" id="oldpass" type="password" class="form__input">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-12">
+                                        <div class="form__group">
+                                            <label for="newpass" class="form__label">新密码:</label>
+                                            <input name="newpass" id="newpass" type="password" class="form__input">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-12">
+                                        <div class="form__group">
+                                            <label for="confirmpass" class="form__label">确认密码:</label>
+                                            <input name="confirmpass" id="confirmpass" type="password"
+                                                class="form__input">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <button class="form__btn" type="button"><span>重置密码</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- end form -->
+                        </div>
+
+                        <div class="tab-pane fade" id="tab-4" role="tabpanel">
+                            <div class="post">
+                                <div class="goods-item">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="col-md-3 col-sm-2 col-xs-2 car-goods-info goods-image-column">
+                                                <a href="goodsDetail.html">
+                                                    <img class="goods-image" src="images/e3.png" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3 col-sm-2 col-xs-2 car-goods-info goods-params">
+                                                <p class="goods-info">
+                                                    宇宙无敌超级第一手机
+                                                </p>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-price">
+                                                <span class="goods-price single-price">￥199</span></div>
+                                            <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-counts">
+                                                <div class="input-group">
+                                                    <input type="text" disabled class="btn num form-control goods-count"
+                                                        value="1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-money-count">
+                                                <span class="goods-totalMoney single-total">￥199</span></div>
+                                            <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-operate">
+                                                <a href="#" type="button" class="btn btn-warning item-sure">评价</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post">
+                                <div class="goods-item">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="col-md-3 col-sm-2 col-xs-2 car-goods-info goods-image-column">
+                                                <a href="goodsDetail.html">
+                                                    <img class="goods-image" src="images/e3.png" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3 col-sm-2 col-xs-2 car-goods-info goods-params">
+                                                <p class="goods-info">
+                                                    宇宙无敌超级第一手机
+                                                </p>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-price">
+                                                <span class="goods-price single-price">￥199</span></div>
+                                            <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-counts">
+                                                <div class="input-group">
+                                                    <input type="text" disabled class="btn num form-control goods-count"
+                                                        value="1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-money-count">
+                                                <span class="goods-totalMoney single-total">￥199</span></div>
+                                            <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-operate">
+                                                <a href="#" type="button" class="btn btn-warning item-sure">评价</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post">
+                                <div class="goods-item">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="col-md-3 col-sm-2 col-xs-2 car-goods-info goods-image-column">
+                                                <a href="goodsDetail.html">
+                                                    <img class="goods-image" src="images/e3.png" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3 col-sm-2 col-xs-2 car-goods-info goods-params">
+                                                <p class="goods-info">
+                                                    宇宙无敌超级第一手机
+                                                </p>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-price">
+                                                <span class="goods-price single-price">￥199</span></div>
+                                            <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-counts">
+                                                <div class="input-group">
+                                                    <input type="text" disabled class="btn num form-control goods-count"
+                                                        value="1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-money-count">
+                                                <span class="goods-totalMoney single-total">￥199</span></div>
+                                            <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-operate">
+                                                <a href="#" type="button" class="btn btn-warning item-sure">评价</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade in active" id="tab-5" role="tabpanel">
+                            <div class="post">
+                                <table class="table table-responsive table-border table-hover table-address">
+                                    <tr>
+                                        <th>收货人</th>
+                                        <th>所在地区</th>
+                                        <th>详细地址</th>
+                                        <th>邮编</th>
+                                        <th>电话/手机</th>
+                                        <th>操作</th>
+                                        <th>设置默认</th>
+                                    </tr>
+                                    <tr>
+                                        <td>小东</td>
+                                        <td>广东省广州市天河区</td>
+                                        <td>珠江新城南岳大厦9楼</td>
+                                        <td>000000</td>
+                                        <td>12345678910</td>
+                                        <td>
+                                            <a href="javascript:;">修改</a>
+                                            <a class="del-address" data-toggle="modal" data-target=".bs-example-modal-sm"  href="javascript:;">删除</a>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-danger">默认地址</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>小东</td>
+                                        <td>广东省广州市天河区</td>
+                                        <td>珠江新城南岳大厦9楼</td>
+                                        <td>000000</td>
+                                        <td>12345678910</td>
+                                        <td>
+                                            <a href="javascript:;">修改</a>
+                                            <a class="del-address" data-toggle="modal" data-target=".bs-example-modal-sm"  href="javascript:;">删除</a>
+                                        </td>
+                                        <td>
+                                            <button>设为默认</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>小东</td>
+                                        <td>广东省广州市天河区</td>
+                                        <td>珠江新城南岳大厦9楼</td>
+                                        <td>000000</td>
+                                        <td>12345678910</td>
+                                        <td>
+                                            <a href="javascript:;">修改</a>
+                                            <a class="del-address" data-toggle="modal" data-target=".bs-example-modal-sm"  href="javascript:;">删除</a>
+                                        </td>
+                                        <td>
+                                            <button>设为默认</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>小东</td>
+                                        <td>广东省广州市天河区</td>
+                                        <td>珠江新城南岳大厦9楼</td>
+                                        <td>000000</td>
+                                        <td>12345678910</td>
+                                        <td>
+                                            <a href="javascript:;">修改</a>
+                                            <a class="del-address" data-toggle="modal" data-target=".bs-example-modal-sm"  href="javascript:;">删除</a>
+                                        </td>
+                                        <td>
+                                            <button>设为默认</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>小东</td>
+                                        <td>广东省广州市天河区</td>
+                                        <td>珠江新城南岳大厦9楼</td>
+                                        <td>000000</td>
+                                        <td>12345678910</td>
+                                        <td>
+                                            <a href="javascript:;">修改</a>
+                                            <a class="del-address" data-toggle="modal" data-target=".bs-example-modal-sm"  href="javascript:;">删除</a>
+                                        </td>
+                                        <td>
+                                            <button>设为默认</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="post">
+                                <!-- form -->
+                                <form action="#" class="form">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h2 class="form__title">新增地址</h2>
+                                        </div>
+
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form__group">
+                                                <label for="uName" class="form__label">收货人:</label>
+                                                <input name="uName" type="text" class="form__input">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form__group">
+                                                <label for="phone" class="form__label">电话:</label>
+                                                <input name="phone" type="text" class="form__input">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form__group">
+                                                <label class="form__label">所在地区:</label>
+                                                <div class="bMap" id='case3'></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form__group">
+                                                <label for="address" class="form__label">详细地址:</label>
+                                                <input name="address" placeholder="如道路、门牌号、小区等" id="address" type="text"
+                                                    class="form__input">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="form__btn" type="button"><span>保存</span></button>
+
+                                            <div class="goods-checked">
+                                                <input type="checkbox"> 设置为默认
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- end form -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 个人中心 -->
+
+    <!--删除确认弹框-->
+    <div class="modal fade  bs-example-modal-sm" tabindex="-1" role="dialog" id="deleteItemTip"
+         aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="gridSystemModalLabel">提示</h4>
+                </div>
+                <div class="modal-body">
+                    确认删除此地址吗？
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary deleteSure">确定</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copy-right">
+        <div class="container">
+            <p>Copyright &copy; 2020.XB All rights reserved.<a target="_blank" href="#"></a></p>
+        </div>
+    </div>
+</body>
+<script src='js/profile.js'></script>
+
+</html>

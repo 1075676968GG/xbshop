@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<!-- Head -->
+<head>
+    <title>注册表单</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- //Meta-Tags -->
+    <!-- Style -->
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="all">
+</head>
+<body>
+<h1>XBiaoShop</h1>
+<div id="app" class="container w3layouts agileits pr">
+    <a href="login.html" class="back" method="post" @submit.prevent></a>
+    <div class="register w3layouts agileits">
+        <h2>欢 迎 注 册</h2>
+        <form action="#" method="post" >
+            <input type="text" Name="Name" placeholder="用户名" required="" v-model="user.username" @blur="checkUsername">
+            <input type="email" Name="Email" placeholder="邮箱" required="" v-model="user.email" @blur="checkEmail">
+            <input type="password" Name="Password" placeholder="密码" required="" v-model="user.password"
+                   @blur="checkPassword">
+            <input type="password" Name="Password" placeholder="确认密码" required="" v-model="rePassword"
+                   @blur="checkPassword">
+        </form>
+        <div class="send-button w3layouts agileits">
+            <input type="button" value="免费注册" @click="submit">
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer w3layouts agileits">
+    <p>Copyright &copy; 2020.XB All rights reserved.</p>
+</div>
+</body>
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/axios-0.19.2.min.js"></script>
+<script src="js/vue-2.6.11.js"></script>
+<script src="js/layer.js"></script>
+<script src="js/jquery-cookie-1.4.1.js"></script>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            user: {},
+            rePassword: ''
+        }, methods: {
+            checkPassword(event) {
+                if (this.rePassword != '' && this.user.password != '') {
+                    if (this.rePassword != this.user.password) {
+                        layer.msg("两次密码不一致");
+                        $(event.target).addClass('input-error');
+                    } else {
+                        $(event.target).removeClass('input-error');
+                    }
+                }
+            },
+            checkEmail(event) {
+                if (this.user.email != '') {
+                    axios.get(`/user/checkEmail/${this.user.email}`).then((res) => {
+                        if (res.data.flag) {
+                            layer.msg("该邮箱已被注册");
+                            $(event.target).addClass('input-error');
+                        } else {
+
+                        }
+                    })
+                }
+            },
+          checkUsername(event){
+                if(this.user.username!=''){
+                    axios.get(`/user/checkUsername/${this.user.username}`).then((res)=>{
+                        if(res.data.flag){
+                            layer.msg("该用户名已被注册")
+                            $(event.target).addClass('input-error');
+                        }else {
+                            $(event.target).removeClass('input-error');
+                        }
+                    })
+                }
+          },
+            submit(event) { /*校验表单是否存在信息错误 */
+                let flag = true; // 假设表单默认是可以提交的
+                $(".back").find('input').each(function () {
+                    // 表单中不能有空的并且表单中的input元素不能有input-error class属性的
+                    if ($(this).val() == '' || $(this).hasClass('input-error')) {
+                        flag = false;
+                    }
+                    return;
+                });
+                if (flag) {
+                    axios.post("/user/register", this.user).then(function (res) {
+                        if (res.data.flag) {
+                            location.href = "/login.html"
+                        } else {
+                            layer.msg(res.data.message);
+                        }
+                    })
+                } else {
+                    layer.msg("信息有误")
+                }
+            }
+        }
+
+    })
+</script>
+
+</html>

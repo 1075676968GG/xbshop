@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>goodsDetail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/ken-burns.css" rel="stylesheet" type="text/css" media="all"/> <!-- 轮播图样式 -->
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css"><!-- 图标样式 -->
+    <link rel="stylesheet" type="text/css" href="./css/goodDetail.css">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/><!-- 放大镜样式 -->
+    <link rel="stylesheet" href="css/share.min.css"><!-- 分享插件 -->
+
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/jquery-scrolltofixed-min.js" type="text/javascript"></script><!-- 导航栏 -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script defer src="js/jquery.flexslider.js"></script><!-- 放大镜 -->
+    <script src="js/imagezoom.js"></script><!-- 放大镜遮罩层 -->
+    <script src="js/main.js"></script>
+    <script src="js/jquery.menu-aim.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/goodsDetail.js"></script>
+    <script src="js/jquery.share.min.js"></script>
+    <script src="js/magnifier.js"></script>
+
+
+</head>
+
+<body>
+<div id="app">
+    <div class="header">
+        <div class="header">
+            <div class="w3ls-header">
+                <div class="w3ls-header-left">
+                    <p>
+                        <a href="#"><img style="position: relative;left: -10px; top: -1px" src="./images/shopping.png">
+                            XB全新高端购物平台
+                        </a>
+                    </p>
+                </div>
+                <div class="w3ls-header-right">
+                    <ul>
+                        <li class="dropdown head-dpdn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"
+                                                                                          aria-hidden="true"></i>人名<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="profile.html">个人中心</a></li>
+                                <li><a href="login.html">注销</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown head-dpdn">
+                            <a href="car.html" class="dropdown-toggle"><i class="fa fa-gift"
+                                                                          aria-hidden="true"></i>购物车</a>
+                        </li>
+                        <li class="dropdown head-dpdn">
+                            <a href="waitPay.html" class="dropdown-toggle"><i class="fa fa-credit-card-alt"
+                                                                              aria-hidden="true"></i>待支付</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="header-two">
+                <div class="container">
+                    <div class="header-logo">
+                        <h1><a href="home.html"><span>X</span>Biao </a></h1>
+                        <h6>Your stores. Your place.</h6>
+                    </div>
+                    <div class="header-search">
+                        <form action="#" method="post">
+                            <input type="search" name="Search" placeholder="Search for a Product..." required="">
+                            <button type="submit" class="btn btn-default" aria-label="Left Align">
+                                <i class="fa fa-search" aria-hidden="true"> </i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="header-cart">
+                        <div class="my-account">
+                            <a href="javascript:;"></a>
+                        </div>
+                        <div class="cart">
+                            <a href="car.html">
+                                <button class="w3view-cart" type="submit" name="submit" value=""><i
+                                        class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                            </a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="header-three">
+                <div class="container">
+                    <ul class="nav nav-pills nav-justified">
+                        <li><a href="productList.html">仙女列表</a></li>
+                        <li><a href="productList.html">可爱列表</a></li>
+                        <li><a href="productList.html">咔咔列表</a></li>
+                        <li><a href="productList.html">哒哒列表</a></li>
+                        <li><a href="productList.html">可爱列表</a></li>
+                        <li><a href="productList.html">咔咔列表</a></li>
+                        <li><a href="productList.html">憨憨列表</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="products">
+        <div class="container">
+            <ol class="breadcrumb breadcrumb1">
+                <li><a href="home.html">Home</a></li>
+                <li class="active">商品详情</li>
+            </ol>
+            <div class="single-page">
+                <div class="single-page-row" id="detail-21">
+                    <div class="col-md-6 col-sm-6 single-top-left">
+                        <div id="magnifier">
+                            <div class="small-box">
+                                <img src="images/big_1.jpg" alt="#">
+                                <span class="hover"></span>
+                                <span class="hover"></span>
+                            </div>
+                            <div class="big-box">
+                                <img src="images/big_1.jpg" alt="#">
+                            </div>
+                            <div class="thumbnail-box">
+                                <a href="javascript:;" class="btn btn-prev btn_prev_disabled"></a>
+                                <a href="javascript:;" class="btn btn-next"></a>
+                                <div class="list">
+                                    <ul class="wrapper">
+                                        <li class="item item-cur" data-src="images/big_1.jpg"><img
+                                                src="images/big_1.jpg" alt="#"></li>
+                                        <li class="item" data-src="images/big_2.jpg"><img src="images/big_2.jpg"
+                                                                                          alt="#">
+                                        </li>
+                                        <li class="item" data-src="images/big_3.jpg"><img src="images/big_3.jpg"
+                                                                                          alt="#">
+                                        </li>
+                                        <li class="item" data-src="images/big_4.jpg"><img src="images/big_4.jpg"
+                                                                                          alt="#">
+                                        </li>
+                                        <li class="item" data-src="images/big_5.jpg"><img src="images/big_5.jpg"
+                                                                                          alt="#">
+                                        </li>
+                                        <li class="item" data-src="images/big_6.jpg"><img src="images/big_6.jpg"
+                                                                                          alt="#">
+                                        </li>
+                                        <li class="item" data-src="images/big_2.jpg"><img src="images/big_2.jpg"
+                                                                                          alt="#">
+                                        </li>
+                                        <li class="item" data-src="images/big_3.jpg"><img src="images/big_3.jpg"
+                                                                                          alt="#">
+                                        </li>
+                                        <li class="item" data-src="images/big_4.jpg"><img src="images/big_4.jpg"
+                                                                                          alt="#">
+                                        </li>
+                                        <li class="item" data-src="images/big_5.jpg"><img src="images/big_5.jpg"
+                                                                                          alt="#">
+                                        </li>
+                                        <li class="item" data-src="images/big_6.jpg"><img src="images/big_6.jpg"
+                                                                                          alt="#">
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 single-top-right">
+                        <h3 class="item_name">{{goods.name}}</h3>
+                        <p>{{goods.content}}</p>
+                        <div class="single-rating">
+                            <ul>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                <li class="rating">浏览量：{{goods.browseCount}}</li>
+                            </ul>
+                        </div>
+                        <div class="single-price">
+                            <ul>
+                                <li class="goodsMoney">￥{{goods.price}}</li>
+                                <li>发布时间:{{goods.publishDate}}</li>
+                                <li><i class="fa fa-gift" aria-hidden="true"></i> Coupon</li>
+                            </ul>
+                        </div>
+
+                        <div class="numActive row">
+                            <div class="col-lg-6 col-sm-6">
+                                <span>数量:</span>
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default sub" type="button">-</button>
+                                    </span>
+                                    <input type="text" class="num form-control" value="1">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default add" type="button">+</button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="input-group">
+                                    <p class="totalMoney">￥{{goods.price}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="car.html">
+                            <button class="w3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i>添加到购物车</button>
+                        </a>
+                        <button class="w3ls-cart w3ls-cart-like"><i class="fa fa-heart-o"
+                                                                    aria-hidden="true"></i>收藏
+                        </button>
+                        <div class="single-page-icons social-icons">
+                            <ul>
+                                <li>
+                                    <h4>Share on</h4>
+                                </li>
+                                <li class="social-share" data-sites="weibo"></li>
+                                <li class="social-share" data-sites="qq"></li>
+                                <li class="social-share" data-sites="wechat"></li>
+                                <li class="social-share" data-sites="qzone"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--最热商品-->
+    <div class="add-products">
+        <div class="container">
+            <h3 class="w3ls-title">热卖商品</h3>
+            <div class="add-products-row">
+                <div class=" w3ls-add-grids">
+                    <a href="#">
+                        <img src="./images/img1.jpg">
+                        <p>无敌单品<span>$20</span></p>
+                        <span>Shop now <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                    </a>
+                </div>
+                <div class=" w3ls-add-grids">
+                    <a href="#">
+                        <img src="./images/img2.jpg">
+                        <p>无敌单品<span>$20</span></p>
+                        <span>Shop now <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                    </a>
+                </div>
+                <div class=" w3ls-add-grids">
+                    <a href="#">
+                        <img src="./images/img3.jpg">
+                        <p>无敌单品<span>$20</span></p>
+                        <span>Shop now <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                    </a>
+
+                </div>
+                <div class=" w3ls-add-grids">
+                    <a href="#">
+                        <img src="./images/img3.jpg">
+                        <p>无敌单品<span>$20</span></p>
+                        <span>Shop now <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                    </a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copy-right">
+    <div class="container">
+        <p>Copyright &copy; 2020.XB All rights reserved.<a target="_blank" href="#"></a></p>
+    </div>
+</div>
+
+
+</body>
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/jquery.backstretch.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/layer.js"></script>
+<script src="js/vue-2.6.11.js"></script>
+<script src="js/axios-0.19.2.min.js"></script>
+<script src="js/jquery-cookie-1.4.1.js"></script>
+<script>
+    $(function () {
+        $('#magnifier').magnifier();
+    });
+</script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            loginUser: JSON.parse(localStorage.getItem("loginUser")),
+            goods: {},
+            favoriteList: [],			// 用户列表
+            isFavorite: false,					// 是否收藏过该商品
+            favoriteBtnClass: '',				// 收藏商品按钮的class样式
+            favoriteBtnTxt: ''					// 收藏商品按钮的文字显示(是收藏文章还是取消收藏)
+        }, methods: {
+            detail() {
+                axios.post(`/goods/${sessionStorage.getItem("goodsId")}`).then(res => {
+                    if (res.data.flag) {
+                        this.goods = res.data.data.goods;
+                        this.isFavorite = res.data.data.isFavorite;
+                        this.favoriteList = res.data.data.favoriteList;
+                        if (this.isFavorite) {
+                            this.favoriteBtnClass = 'btn btn-danger';
+                            this.favoriteBtnTxt = '取消收藏';
+                        } else {
+                            this.favoriteBtnClass = 'btn btn-info';
+                            this.favoriteBtnTxt = '收藏商品';
+                        }
+                    } else {
+                        layer.msg(res.data.message)
+                    }
+                })
+            },
+            favorite() {
+                axios.post(`/goods/favorite/${this.goods.id}`).then(res => {
+                    if (res.date.flag) {
+                        this.favoriteBtnClass = 'btn btn-danger';
+                        this.favoriteBtnTxt = '取消收藏';
+                    } else {
+                        this.favoriteBtnClass = 'btn btn-info';
+                        this.favoriteBtnTxt = '收藏商品';
+                    }
+                    this.detail();
+                    layer.msg(res.data.message);
+                })
+            }
+        },
+        created(){
+            this.detail();
+        }
+    })
+</script>
+
+</html>

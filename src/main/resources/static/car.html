@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>car</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css"><!-- 图标样式 -->
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="./css/car.css">
+
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/jquery-scrolltofixed-min.js" type="text/javascript"></script><!-- 导航栏 -->
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script src="js/jquery.menu-aim.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/main.js"></script><!-- 导航栏 -->
+    <script src="js/del.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="w3ls-header">
+            <div class="w3ls-header-left">
+                <p>
+                    <a href="#"><img style="position: relative;left: -10px; top: -1px" src="./images/shopping.png">
+                        XB全新高端购物平台
+                    </a>
+                </p>
+            </div>
+            <div class="w3ls-header-right">
+                <ul>
+                    <li class="dropdown head-dpdn">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"
+                                aria-hidden="true"></i>人名<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">个人中心</a></li>
+                            <li><a href="#">注销</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown head-dpdn">
+                        <a href="car.html" class="dropdown-toggle"><i class="fa fa-gift" aria-hidden="true"></i>购物车</a>
+                    </li>
+                    <li class="dropdown head-dpdn">
+                        <a href="waitPay.html" class="dropdown-toggle"><i class="fa fa-credit-card-alt"
+                                aria-hidden="true"></i>待支付</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="header-two">
+            <div class="container">
+                <div class="header-logo">
+                    <h1><a href="home.html"><span>X</span>Biao </a></h1>
+                    <h6>Your stores. Your place.</h6>
+                </div>
+                <div class="header-search">
+                    <form action="#" method="post">
+                        <input type="search" name="Search" placeholder="Search for a Product..." required="">
+                        <button type="submit" class="btn btn-default" aria-label="Left Align">
+                            <i class="fa fa-search" aria-hidden="true"> </i>
+                        </button>
+                    </form>
+                </div>
+                <div class="header-cart">
+                    <div class="my-account">
+                        <a href="javascript:;"></a>
+                    </div>
+                    <div class="cart">
+                        <a href="car.html">
+                            <button class="w3view-cart" type="submit" name="submit" value=""><i
+                                    class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="header-three">
+            <div class="container">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="productList.html">仙女列表</a></li>
+                    <li><a href="productList.html">可爱列表</a></li>
+                    <li><a href="productList.html">咔咔列表</a></li>
+                    <li><a href="productList.html">哒哒列表</a></li>
+                    <li><a href="productList.html">可爱列表</a></li>
+                    <li><a href="productList.html">咔咔列表</a></li>
+                    <li><a href="productList.html">憨憨列表</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- products -->
+    <div class="products">
+        <div class="container">
+            <div class="col-md-12 product-w3ls-right">
+                <!-- breadcrumbs -->
+                <ol class="breadcrumb breadcrumb1">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="active">购物车</li>
+                </ol>
+                <div class="clearfix"> </div>
+                <!-- //breadcrumbs -->
+
+                <div class="shopping-car-container">
+                    <div class="car-headers-menu">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-2 col-xs-2 car-menu">商品信息</div>
+                            <div class="col-md-3 col-sm-2 col-xs-2 car-menu">商品类型</div>
+                            <div class="col-md-1 col-sm-2 col-xs-2 car-menu">单价</div>
+                            <div class="col-md-2 col-sm-2 col-xs-2 car-menu">数量</div>
+                            <div class="col-md-1 col-sm-2 col-xs-2 car-menu">金额</div>
+                            <div class="col-md-2 col-sm-2 col-xs-2 car-menu">操作</div>
+                        </div>
+                    </div>
+                    <div class="goods-content">
+                        <div class="goods-item">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="col-md-3 col-sm-2 col-xs-2 car-goods-info goods-image-column">
+                                        <a href="goodsDetail.html">
+                                            <img class="goods-image" src="images/e3.png" />
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 col-sm-2 col-xs-2 car-goods-info goods-params">
+                                        <p class="goods-info">
+                                            宇宙无敌超级第一手机1
+                                        </p>
+                                    </div>
+                                    <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-price">
+                                        <span class="goods-price single-price">￥199.00</span></div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-counts">
+                                        <div class="input-group">
+                                            <div class="input-group-btn">
+                                                <button type="button"
+                                                    class="goods-sub btn btn-default car-decrease">-</button>
+                                            </div>
+                                            <input type="text" disabled class="goods-num form-control goods-count"
+                                                value="1">
+                                            <div class="input-group-btn">
+                                                <button type="button"
+                                                    class="goods-add btn btn-default car-add">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-money-count">
+                                        <span class="goods-totalMoney single-total">￥199.00</span></div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-operate">
+                                        <a href="waitPay.html" class="btn btn-primary">结算</a>
+                                        <a data-toggle="modal" data-target=".bs-example-modal-sm" href="#"
+                                            class="btn btn-danger item-delete">删除</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods-item">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="col-md-3 col-sm-2 col-xs-2 car-goods-info goods-image-column">
+                                        <a href="goodsDetail.html">
+                                            <img class="goods-image" src="images/e3.png" />
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 col-sm-2 col-xs-2 car-goods-info goods-params">
+                                        <p class="goods-info">
+                                            宇宙无敌超级第一手机2
+                                        </p>
+                                    </div>
+                                    <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-price">
+                                        <span class="goods-price single-price">￥199.00</span></div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-counts">
+                                        <div class="input-group">
+                                            <div class="input-group-btn">
+                                                <button type="button"
+                                                    class="goods-sub btn btn-default car-decrease">-</button>
+                                            </div>
+                                            <input type="text" disabled class="goods-num form-control goods-count"
+                                                value="1">
+                                            <div class="input-group-btn">
+                                                <button type="button"
+                                                    class="goods-add btn btn-default car-add">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 col-sm-2 col-xs-2 car-goods-info goods-money-count">
+                                        <span class="goods-totalMoney single-total">￥199.00</span></div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2 car-goods-info goods-operate">
+                                        <a href="waitPay.html" class="btn btn-primary">结算</a>
+                                        <a data-toggle="modal" data-target=".bs-example-modal-sm" href="#"
+                                            class="btn btn-danger item-delete">删除</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods-btns text-right">
+                            <input disabled class="btn btn-default goodsList-totalMoney" value="$111">
+                            <a class="btn btn-primary" href="waitPay.html">全部结算</a>
+                        </div>
+                    </div>
+                    <!--删除确认弹框-->
+                    <div class="modal fade  bs-example-modal-sm" tabindex="-1" role="dialog" id="deleteItemTip"
+                        aria-labelledby="gridSystemModalLabel">
+                        <div class="modal-dialog modal-sm" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="gridSystemModalLabel">提示</h4>
+                                </div>
+                                <div class="modal-body">
+                                    确认删除此商品？
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary deleteSure">确定</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //add-products -->
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!--//products-->
+
+    <!--最热商品-->
+    <div class="add-products">
+        <h3 class="w3ls-title">热卖商品</h3>
+        <div class="container">
+            <div class="add-products-row">
+                <div class=" w3ls-add-grids">
+                    <a href="goodsDetail.html">
+                        <img src="./images/img1.jpg">
+                        <p>无敌单品<span>$20</span></p>
+                        <span>Shop now <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                    </a>
+                </div>
+                <div class=" w3ls-add-grids">
+                    <a href="goodsDetail.html">
+                        <img src="./images/img2.jpg">
+                        <p>无敌单品<span>$20</span></p>
+                        <span>Shop now <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                    </a>
+                </div>
+                <div class=" w3ls-add-grids">
+                    <a href="goodsDetail.html">
+                        <img src="./images/img3.jpg">
+                        <p>无敌单品<span>$20</span></p>
+                        <span>Shop now <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                    </a>
+
+                </div>
+                <div class=" w3ls-add-grids">
+                    <a href="goodsDetail.html">
+                        <img src="./images/img3.jpg">
+                        <p>无敌单品<span>$20</span></p>
+                        <span>Shop now <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                    </a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copy-right">
+        <div class="container">
+            <p>Copyright &copy; 2020.XB All rights reserved.<a target="_blank" href="#"></a></p>
+        </div>
+    </div>
+</body>
+
+</html>

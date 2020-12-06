@@ -1,0 +1,28 @@
+.w3ls-add-grids>a,
+.w3ls-add-grids a>p {
+    color: black;
+}
+
+.w3ls-add-grids a {
+    border: 1px solid white;
+}
+
+.w3ls-add-grids a:hover {
+    color: #08bce4;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.w3ls-add-grids a>p>span {
+    margin-left: 3%;
+}
+
+.header-three ul a {
+    color: white;
+}
+
+.nav>li>a:hover,
+.nav>li>a:focus {
+    color: skyblue;
+    background-color: transparent;
+}
